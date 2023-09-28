@@ -7,4 +7,4 @@
 Ex:
 
         def greeting(name: str) -> str:
-        return 'Hello ' + name
+            return 'Hello ' + name
