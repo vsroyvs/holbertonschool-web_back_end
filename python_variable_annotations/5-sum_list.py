@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """ Module to sum a element of list"""
+from typing import List
 
 
-def sum_list(input_list: list[float]) -> float:
+def sum_list(input_list: List[float]) -> float:
     """Sum a list of floats"""
-    result = sum((x for x in input_list))
-    return result
+    return sum(input_list)
