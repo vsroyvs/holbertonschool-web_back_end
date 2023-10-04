@@ -13,5 +13,5 @@ if __name__ == '__main__':
     print(f"{x} logs")
     print("Methods:")
     for i in method:
-        print(f"method {i}: {mycol.find({'method': i}).count()}")
-    print(f"{mycol.find({'method': 'GET', 'path': '/status'}).count()} status check")
+        print(f"method {i}: {mycol.count_documents({'method': i})}")
+    print(f"{mycol.count_documents({'method': 'GET', 'path': '/status'})} status check")
