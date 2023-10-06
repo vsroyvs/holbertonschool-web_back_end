@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-'''module to read a csv file and diplay ccording to the parameters'''
+'''module to read a csv file and display dataset according to the parameters'''
 import csv
 import math
 from typing import List
@@ -35,7 +35,7 @@ class Server:
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
         """Returns dataset for the given page"""
-        total_items = len(self.dataset)
+        total_items = len(self.dataset())
         total_pages = (total_items + page_size - 1) // page_size
         assert_text = "AssertionError raised with negative values"
         assert page < 0 or page_size < 0, assert_text
