@@ -40,8 +40,9 @@ class Server:
 
         total_items = len(self.dataset())
         total_pages = (total_items + page_size - 1) // page_size
+        first_index, end_index = index_range(page, page_size)
         if 1 <= page <= total_pages:
-            page_data = self.dataset[index_range(page, page_size)]
+            page_data = self.dataset()[first_index:end_index]
             return page_data
         else:
             return []
