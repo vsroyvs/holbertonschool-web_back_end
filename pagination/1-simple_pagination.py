@@ -35,13 +35,12 @@ class Server:
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
         """Returns dataset for the given page"""
+        assert page > 0 or page_size > 0
+        assert page != 0 or page_size != 0
+        assert type(page) is int or type(page_size) is int
+
         total_items = len(self.dataset())
         total_pages = (total_items + page_size - 1) // page_size
-        assert_text = "AssertionError raised with negative values"
-        assert page < 0 or page_size < 0, assert_text
-        assert page == 0 or page_size == 0, "AssertionError raised with 0"
-        text = "AssertionError raised when page and/or page_size are not ints"
-        assert type(page) is not int or type(page_size) is not int, text
         if 1 <= page <= total_pages:
             page_data = self.dataset[index_range(page, page_size)]
             return page_data
