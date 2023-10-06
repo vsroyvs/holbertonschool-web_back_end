@@ -35,8 +35,8 @@ class Server:
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
         """Returns dataset for the given page"""
-        assert page > 0 or page_size > 0
-        assert isinstance(page, int) or isinstance(page_size, int)
+        assert isinstance(page, int) and page > 0
+        assert isinstance(page_size, int) and page_size > 0
 
         total_items = len(self.dataset())
         total_pages = (total_items + page_size - 1) // page_size
