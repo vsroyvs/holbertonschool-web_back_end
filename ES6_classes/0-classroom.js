@@ -4,6 +4,6 @@ export default class ClassRoom {
             throw new Error('Class extending Building must override evacuationWarningMessage');
         }
         if (typeof maxStudentsSize !== 'number') throw TypeError('maxStudentsSize must be a number');
-        this._maxStudentsSize = maxStudentsSize
+        this._maxStudentsSize = maxStudentsSize;
     } 
 }
