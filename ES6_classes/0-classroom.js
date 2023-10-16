@@ -6,4 +6,4 @@ export default class ClassRoom {
         if (typeof maxStudentsSize !== 'number') throw TypeError('maxStudentsSize must be a number');
         this._maxStudentsSize = maxStudentsSize
     } 
-};
+}
