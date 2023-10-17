@@ -30,7 +30,7 @@ export default class HolbertonCourse {
   get students() {
     return this._students;
   }
-  
+
   set students(values) {
     if (!Array.isArray(values)) throw TypeError('students must be a string');
     this._students = values;
