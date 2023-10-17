@@ -6,7 +6,7 @@ export default class Pricing {
     if (!(currency instanceof Currency)) throw TypeError('currency must be a Currency instane');
     this._amount = amount;
     this._currency = currency;
-}
+  }
 
   // getter and setter
   get amount() {
@@ -16,7 +16,7 @@ export default class Pricing {
   set amount(value) {
     if (typeof value !== 'number') throw TypeError('amount must be a number');
     this._amount = value;
-}
+  }
 
   get currency() {
     return this._currency;
@@ -24,12 +24,12 @@ export default class Pricing {
 
   set currency(value) {
     if (!(value instanceof Currency)) throw TypeError('currency must be a Currency instane');
-    this._currency = value
+    this._currency = value;
   }
 
   // methods
   displayFullPrice() {
-    return `${this._amount} ${this._currency._name} (${this._currency._name})`
+    return `${this._amount} ${this._currency.name} (${this._currency.code})`;
   }
 
   static convertPrice(amount, conversionRate) {
