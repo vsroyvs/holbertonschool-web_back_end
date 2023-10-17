@@ -6,7 +6,7 @@ export default class Currency {
     this._name = name;
   }
 
-// getter and setter
+  // getter and setter
   get code() {
     return this._code;
   }
@@ -26,7 +26,7 @@ export default class Currency {
   }
 
   // private and public methods
-  displayFullCurrency(){
+  displayFullCurrency() {
     return `${this._name} (${this._code})`;
   }
 }
