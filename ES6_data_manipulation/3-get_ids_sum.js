@@ -1,7 +1,7 @@
 const getStudentIdsSum = (arrayStudents) => {
-  const studentIdsSum = arrayStudent.reduce(
+  const studentIdsSum = arrayStudents.reduce(
     (accumulator, student) => {
-      accumulator + student.id
+      accumulator + student.id;
     }, 0);
   return studentIdsSum
 };
